@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",              // Use a target like ES2022 or later
+    "module": "ESNext",              // Make sure to use ESNext module system for ES Modules
+    "moduleResolution": "node",   // Node.js-style module resolution
+    "rootDir": "src",              // All your TypeScript files are in the 'src' folder
+    "outDir": "build",             // Compiled JS files will go here
+    "esModuleInterop": true,         // Enables importing CommonJS modules
+    "strict": true,                  // Enforce strict typing
+    "skipLibCheck": true,            // Skip type checking for libraries
+    "resolveJsonModule": true,       // Allow importing of JSON files
+    "forceConsistentCasingInFileNames": true,  // Ensures that file names are case-sensitive in imports (helps avoid issues on case-sensitive file systems)
+    "allowImportingTsExtensions": true,        // Allows importing TypeScript files with .ts extensions in module imports
+    "noEmit": true,                  // Prevents TypeScript from emitting any output files (useful when you only need type-checking)
+  },
+  "include": ["src"],         // Include all .ts files in the 'src' folder
+  "exclude": ["node_modules"]         // Exclude node_modules
+}
