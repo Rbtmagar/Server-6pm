@@ -2,10 +2,11 @@ import mongoose from "mongoose"
 import { Role } from "./enum"
 
 
-interface IPayLoad {
+export interface IPayload {
     _id:mongoose.Types.ObjectId,
     email:string,
-    user_name:string,
-    full_name:string,
+    userName:string,
+    fullName:string,
     role:Role
 }
+ 

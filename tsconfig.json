@@ -1,18 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ES2022",              // Use a target like ES2022 or later
-    "module": "ESNext",              // Make sure to use ESNext module system for ES Modules
-    "moduleResolution": "node",   // Node.js-style module resolution
-    "rootDir": "src",              // All your TypeScript files are in the 'src' folder
-    "outDir": "build",             // Compiled JS files will go here
-    "esModuleInterop": true,         // Enables importing CommonJS modules
-    "strict": true,                  // Enforce strict typing
-    "skipLibCheck": true,            // Skip type checking for libraries
-    "resolveJsonModule": true,       // Allow importing of JSON files
-    "forceConsistentCasingInFileNames": true,  // Ensures that file names are case-sensitive in imports (helps avoid issues on case-sensitive file systems)
-    "allowImportingTsExtensions": true,        // Allows importing TypeScript files with .ts extensions in module imports
-    "noEmit": true,                  // Prevents TypeScript from emitting any output files (useful when you only need type-checking)
+ 
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+ 
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+                                /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
+    "outDir": "./build",                                   /* Specify an output folder for all emitted files. */
+
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+
+    "strict": true,                                    /* Enable all strict type-checking options. */
+    "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
-  "include": ["src"],         // Include all .ts files in the 'src' folder
-  "exclude": ["node_modules"]         // Exclude node_modules
+  "include": ["src/**/*"],
+  "exclude":["node_modules","build"]
 }

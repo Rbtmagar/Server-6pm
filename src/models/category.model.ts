@@ -1,4 +1,5 @@
 import { Schema, Types } from "mongoose";
+import mongoose, { model } from "mongoose";
 
 const categorySchema = new Schema({
     name:{
@@ -6,7 +7,7 @@ const categorySchema = new Schema({
         required:[true,'name is required'],
     },
     user:{
-        type: Types.ObjectId,
+        type: Schema.Types.ObjectId,
         ref:'user',
         required:[true,'User is required']
     }
